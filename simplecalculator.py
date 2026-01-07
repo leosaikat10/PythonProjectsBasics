@@ -16,6 +16,9 @@ elif choice == "2":
 elif choice == "3":
   print("Result:",a*b)
 elif choice == "4":
-  print("Result:",a/b)
+  if b == 0:
+    print("Error: Division with zero is not allowed")
+  else:
+    print("Result:",a/b)  
 else:
   print("Invalid Choice")
