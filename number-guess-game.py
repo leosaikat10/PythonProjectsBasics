@@ -1,9 +1,16 @@
 import random
 
-number = random.randint(1,10)
-guess = int(input("Guess a number between 1 and 10 :"))
+number = random.randint(1, 10)
+attempts = 3
 
-if guess == number:
-  print("Congratulations ! you guessed it right ")
-else:
-  print(f"Sorry ! the correct number was {number}")
+while attempts > 0:
+    guess = int(input("Guess a number between 1 and 10: "))
+    if guess == number:
+        print("You guessed it right!")
+        break
+    else:
+        attempts -= 1
+        print("Wrong guess. Attempts left:", attempts)
+
+if attempts == 0:
+    print("Game over! The number was:", number)
