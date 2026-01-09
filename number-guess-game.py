@@ -6,11 +6,15 @@ attempts = 3
 while attempts > 0:
     guess = int(input("Guess a number between 1 and 10: "))
     if guess == number:
-        print("You guessed it right!")
-        break
+        print("Congratulations ! You guessed the number ")
+    elif guess > number:
+        print("Too high ! try again ")
     else:
-        attempts -= 1
-        print("Wrong guess. Attempts left:", attempts)
+        print("Too Low ! try again ")
 
+    attempts -= 1
+    print(f"You have {attempts} attempts left.")
+    
+           
 if attempts == 0:
     print("Game over! The number was:", number)
